@@ -1,0 +1,67 @@
+@import "../_variables/Variables.scss";
+
+.experience__container {
+  display: flex;
+  justify-content: center;
+
+  .experience__frontend {
+    background: $color-bg-variant;
+    padding: 2.4rem 5rem;
+    border-radius: 2rem;
+    border: 1px solid transparent;
+    transition: $transition;
+    &:hover {
+      background: transparent;
+      border-color: $color-primary-variant;
+      cursor: default;
+    }
+    h3 {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: $color-primary;
+    }
+
+    .experience__content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      row-gap: 2rem;
+
+      .experience__details {
+        display: flex;
+        align-items: center;
+        .experience__details-icon {
+          color: $color-primary;
+        }
+        h4 {
+          margin: 0 1rem;
+        }
+      }
+    }
+  }
+}
+
+// ==================== MEDIA QUERIES (MEDIUM DEVICES) ====================
+@media screen and (max-width: 1024px) {
+  .experience__container {
+    grid-template-columns: 1fr;
+    .experience__frontend {
+      width: 80%;
+      padding: 2rem;
+      margin: 0 auto;
+      .experience__content {
+        padding: 1rem;
+      }
+    }
+  }
+}
+
+// ==================== MEDIA QUERIES (SMALL DEVICES) ====================
+@media screen and (max-width: 600px) {
+  .experience__container {
+    gap: 1rem;
+    .experience__frontend {
+      width: 100%;
+      padding: 2rem 1rem;
+    }
+  }
+}
