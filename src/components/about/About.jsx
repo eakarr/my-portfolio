@@ -31,7 +31,7 @@ const About = () => {
             what I want to do, how those paragraphs were written there, etc. So,
             I decided to search about what this field is called in general and I
             found out that this was called Frontend Development. I started
-            working by watching videos, reading lots of articles, and of course,
+            working on by watching videos, reading lots of articles, and of course,
             making lots of googling. After some time, I got into a couple of
             bootcamps and improved my Fronted skills even further! My main goal
             is to become a Frontend Developer that every company needs in their
