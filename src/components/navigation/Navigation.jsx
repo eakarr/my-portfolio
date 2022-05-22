@@ -35,7 +35,7 @@ const Navigation = () => {
     const observerOptions = {
       root: null,
       rootMargin: "0px",
-      threshold: 0.7,
+      threshold: 0.62,
     };
   
     function observerCallback(entries, observer) {
@@ -60,7 +60,7 @@ const Navigation = () => {
     const observer = new IntersectionObserver(observerCallback, observerOptions);
   
     sections.forEach((sec) => observer.observe(sec));
-  }, 100);
+  }, 10);
   return (
     <nav>
       <a
