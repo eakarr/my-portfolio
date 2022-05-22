@@ -1,0 +1,22 @@
+@import "../_variables/Variables.scss";
+
+footer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: $color-primary-variant;
+  padding: 3rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 7rem;
+}
+
+.footer__socials {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  font-size: 2rem;
+  a {
+    margin: 0 0.4rem;
+  }
+}
