@@ -14,7 +14,7 @@ const Navigation = () => {
     function selectElementById(id) {
       return document.querySelector(`#${id}`);
     }
-  
+
     const sections = [
       selectElementById("home"),
       selectElementById("about"),
@@ -22,7 +22,7 @@ const Navigation = () => {
       selectElementById("portfolio"),
       selectElementById("contact"),
     ];
-  
+
     const navItems = {
       home: selectElementById("homeNavItem"),
       about: selectElementById("aboutNavItem"),
@@ -30,14 +30,24 @@ const Navigation = () => {
       portfolio: selectElementById("portfolioNavItem"),
       contact: selectElementById("contactNavItem"),
     };
-  
+
     // intersection observer setup
     const observerOptions = {
       root: null,
       rootMargin: "0px",
       threshold: 0.62,
     };
-  
+    if (window.innerHeight <= 800) {
+      observerOptions.threshold = 0.2;
+    } else if (window.innerHeight <= 950) {
+      observerOptions.threshold = 0.3;
+    } else if (window.innerHeight <= 1200) {
+      observerOptions.threshold = 0.6;
+    } else {
+      observerOptions.threshold = 0.7;
+    }
+    console.log(observerOptions.threshold);
+    console.log(window.innerHeight);
     function observerCallback(entries, observer) {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -56,9 +66,12 @@ const Navigation = () => {
         }
       });
     }
-  
-    const observer = new IntersectionObserver(observerCallback, observerOptions);
-  
+
+    const observer = new IntersectionObserver(
+      observerCallback,
+      observerOptions
+    );
+
     sections.forEach((sec) => observer.observe(sec));
   }, 10);
   return (
