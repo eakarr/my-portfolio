@@ -46,8 +46,8 @@ const Navigation = () => {
     } else {
       observerOptions.threshold = 0.7;
     }
-    console.log(observerOptions.threshold);
-    console.log(window.innerHeight);
+    // console.log(observerOptions.threshold);
+    // console.log(window.innerHeight);
     function observerCallback(entries, observer) {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
