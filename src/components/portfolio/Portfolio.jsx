@@ -2,6 +2,7 @@ import ikinciElProject from "../../assests/ikinci-el-project.png";
 import marvelAPI from "../../assests/marvel-api.png";
 import miniMathGame from "../../assests/mini-math-game.png";
 import registrationPanel from "../../assests/registration-panel.png";
+import DraWMe from "../../assests/drawme.png";
 
 import "./Portfolio.scss";
 
@@ -33,6 +34,13 @@ const myProjects = [
     title: "Registration Panel",
     github: "https://github.com/eakarr/patika-register-page-reactjs",
     demo: "https://patika-register-page-reactjs.vercel.app/",
+  },
+  {
+    id: Math.random(),
+    image: DraWMe,
+    title: "DraWMe",
+    github: "https://github.com/eakarr/draWMe-reactjs",
+    demo: "https://drawing-app-reactjs.vercel.app/",
   },
 ];
 
